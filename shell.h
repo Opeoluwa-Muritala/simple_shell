@@ -2,7 +2,7 @@
 #define SHELL_H
 
 #include <unistd.h>
-#include <stdlib>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
