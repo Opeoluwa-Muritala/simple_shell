@@ -1,7 +1,7 @@
 # Simple Shell
 
 ### Introduction
-This repository is a [Holberton School](https://www.holbertonschool.com/) Project. The school project consisted in writing a shell like sh (Bourne Shell) by Stephen Bourne  , in **C**, using a limited number of standard library functions, So Instead we used ower own function that we rewrited over the past three month [Here](https://github.com/Theemiss/holbertonschool-low_level_programming/)
+This repository is a [ALX](https://www.alxafrica.com/) Project. The school project consisted in writing a shell like sh (Bourne Shell) by Stephen Bourne  , in **C**, using a limited number of standard library functions, So Instead we used ower own function that we rewrited over the past three month [Here](https://github.com/Opeoluwa-Muritala/alx-low_level_programming/)
 
 The goal in this project was to make us understand how a shell works. To single out some items: what is the *environment*, the difference between *functions* and *system calls*, how to create *processes* using `execve`...  
 
@@ -26,19 +26,19 @@ A command will be of the type `$ command`
 This shell can handle two types of commands: builtins and normal program.
 ##### List of built-ins
 Currently the list of built-ins:  
-* cd [directory]  
+* `cd` [directory]  
 Switch to the specified directory (path).
-* env  
+* `env ` 
 Displays the environment variable
-* exit [exitstatus]  
+* `exit` [exitstatus]  
 Exit from the program with exitstatus value. 0 by default.
-* getenv NAME  
+* `getenv` `NAME`  
 Return the value of the NAME variable if it is in the environment
-* help [command]  
+* `help` [command]  
 Displays the syntax for the command, or all commands.  
-* history  
+* `history`  
 Displays the last typed user .
-* echo [$$] or [$?] or [$PATH]
+* `echo` `[$$]` or `[$?]` or `[$PATH]`
 Return pid and exit statue and PATH.
 ##### Command
 Basicly Every Program in `$PATH`
@@ -51,18 +51,18 @@ it Handle Options Like `ls -l`
 it Handle All Three Togther Like `ls -l /var `
 
 it Handle Command Path Also Like `/bin/ls` And All The Option And Path Like `/bin/ls -l /var`
-it Handle Comments **#**
+it Handles Comments **#**
 
 ### Also
-* Handle Ctrl+C: your shell should not quit when the user inputs ^C
-* If no argument is given to cd the command must be interpreted like cd $HOME
-* handle the command cd -
+* Handle `Ctrl+C`: your shell should not quit when the user inputs `^C`
+* If no argument is given to `cd` the command must be interpreted like `cd $HOME`
+* handle the command `cd -`
 * Handle variables replacement
-* Handle the $? variable
-* Handle the $$ variable
-* Handle The Argument file like `./hsh test` Where test is a file filled with command and builtin to excute.
-### List of functions and system calls we could use
-List of allowed functions and system calls
+* Handle the `$?` variable
+* Handle the `$$` variable
+* Handle The Argument file like `./shell test` Where test is a file filled with command and builtin to excute.
+
+### List of allowed functions and system calls
 
     access (man 2 access)
     chdir (man 2 chdir)
@@ -93,6 +93,7 @@ List of allowed functions and system calls
     write (man 2 write)
     _exit (man 2 _exit)
 ### Custom Function (Recreation of Standard Function in C)
+```
  * _strncpy
  * _strlen
  * _putchar
@@ -114,7 +115,7 @@ List of allowed functions and system calls
  * _getenv
  * _getline
  * _strtok
-
+```
 For More Info About It Check The Man Page by
 ```
 Username@your-regular-prompt:~$ man ./man_1_simple_shell
