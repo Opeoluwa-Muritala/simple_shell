@@ -13,17 +13,17 @@ int handle_builtin(char **cmd, int er)
 		{"cd", change_dir},
 		{"env", dis_env},
 		{"echo", echo},
-		{"history",history},
+		{"history", history},
 		{"help", display_help},
-		{NULL,NULL}
+		{NULL, NULL}
 	};
 	int i = 0;
 
-	while ((bil + i) -> command)
+	while ((bil + i)->command)
 	{
 		if (_strcmp(cmd[0], (bil + i)->command) == 0)
 		{
-			return ((bil + i) -> fun(cmd,er));
+			return ((bil + i)->fun(cmd,er));
 		}
 		i++;
 	}
@@ -59,7 +59,7 @@ int check_cmd(char **cmd, char *input, int c, char **argv)
 
 	if (pid == 0)
 	{
-		if (_strncmp(*cmd, "./",2) != 0 && _strncmp(*cmd, "/",1) != 0)
+		if (_strncmp(*cmd, "./", 2) != 0 && _strncmp(*cmd, "/", 1) != 0)
 		{
 			path_cmd(cmd);
 		}
@@ -71,7 +71,7 @@ int check_cmd(char **cmd, char *input, int c, char **argv)
 			free(cmd);
 			exit(EXIT_FAILURE);
 		}
-		return(EXIT_SUCCESS);
+		return (EXIT_SUCCESS);
 	}
 	wait(&status);
 	return (0);
@@ -84,7 +84,7 @@ int check_cmd(char **cmd, char *input, int c, char **argv)
  */
 void signal_to_handel(int sig)
 {
-	if (sig = SIGINT)
+	if (sig == SIGINT)
 	{
 		PRINTER("\n$");
 	}
