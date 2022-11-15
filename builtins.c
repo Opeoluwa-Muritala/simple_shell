@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /**
  * exit_bul - Exit Statue Shell
  * @cmd: Parsed Command
@@ -14,7 +15,7 @@ void  exit_bul(char **cmd, char *input, char **argv, int c)
 	if (cmd[1] == NULL)
 	{
 		free(input);
-		free(cmd);
+		free(cmd);	
 		exit(EXIT_SUCCESS);
 	}
 	while (cmd[1][i])
@@ -74,6 +75,7 @@ int change_dir(char **cmd, __attribute__((unused))int er)
  * @er:Statue of Last command Excuted
  * Return:Always 0
  */
+
 int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int er)
 {
 size_t i;
@@ -151,3 +153,4 @@ int echo_bul(char **cmd, int st)
 
 	return (1);
 }
+

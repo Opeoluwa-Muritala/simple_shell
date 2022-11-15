@@ -4,21 +4,18 @@
  * main - Simple Shell (shell)
  * @argc: Arguement count
  * @argv: Arguement value
- * Return: 
+ * Return: 0 If Error 1
  */
 
 int main(__attribute__((unused)) int argc, char **argv)
 {
 	char *input, **cmd;
 	int counter = 0, statue = 1, st = 0;
-
 	if (argv[1] != NULL)
 	{
 		read_file(argv[1], argv);
 	}
-
 	signal(SIGINT, signal_to_handel);
-
 	while (statue)
 	{
 		counter++;
@@ -30,7 +27,6 @@ int main(__attribute__((unused)) int argc, char **argv)
 		if (input[0] == '\0')
 		{
 			continue;
-
 		}
 		history(input);
 		cmd = parse_cmd(input);
@@ -40,7 +36,7 @@ int main(__attribute__((unused)) int argc, char **argv)
 		}
 		else if (check_builtin(cmd) == 0)
 		{
-			st = handle_builtin(cmd,st);
+			st = handle_builtin(cmd, st);
 			continue;
 		}
 		else
