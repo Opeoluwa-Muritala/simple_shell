@@ -1,48 +1,48 @@
 # Simple Shell
 
 ### Introduction
-This repository is a [ALX](https://www.alxafrica.com/) Project. The school project consisted in writing a shell like sh (Bourne Shell) by Stephen Bourne  , in **C**, using a limited number of standard library functions, So Instead we used ower own function that we rewrited over the past three month [Here](https://github.com/Opeoluwa-Muritala/alx-low_level_programming/)
+This repository is a [ALX](https://www.alxafrica.com/) Project. The school project consisted in writing a shell in **C**, using a limited number of standard library functions, So Instead we used our own function that we rewrote over the past three month [Here](https://github.com/Opeoluwa-Muritala/alx-low_level_programming/)
 
-The goal in this project was to make us understand how a shell works. To single out some items: what is the *environment*, the difference between *functions* and *system calls*, how to create *processes* using `execve`...  
+The goal in this project was to make us understand how a shell works. To single out some items: what is an *environment*, the difference between *functions* and *system calls*, how to create *processes* using `execve`...
 
-## Usage 
-In order to run this program, 
+## Usage
+In order to run this program,
 
 Clone This Repo
 
 `` git clone https://github.com/Opeoluwa-Muritala/simple_shell ``
 
-compile it with  
+compile it with
 
-`gcc 4.8.4 -Wall -Werror -Wextra -pedantic *.c -o shell`.  
-You can then run it by invoking `./shell` in that same directory.  
+`gcc 4.8.4 -Wall -Werror -Wextra -pedantic *.c -o shell`.
+You can then run it by invoking `./shell` in that same directory.
 
 ### How to use it
-In order to use this shell, in a terminal, first run the program:    
-`prompt$ ./shell`  
-It wil then display a simple prompt and wait for commands.  
-`$ `   
-A command will be of the type `$ command`  
+In order to use this shell, in a terminal, first run the program:
+`prompt$ ./shell`
+It wil then display a simple prompt and wait for commands.
+`$ `
+A command will be of the type `$ command`
 This shell can handle two types of commands: builtins and normal program.
 ##### List of built-ins
-Currently the list of built-ins:  
-* `cd` [directory]  
+Currently the list of built-ins:
+* `cd` [directory]
 Switch to the specified directory (path).
-* `env ` 
+* `env `
 Displays the environment variable
-* `exit` [exitstatus]  
+* `exit` [exitstatus]
 Exit from the program with exitstatus value. 0 by default.
-* `getenv` `NAME`  
+* `getenv` `NAME`
 Return the value of the NAME variable if it is in the environment
-* `help` [command]  
-Displays the syntax for the command, or all commands.  
-* `history`  
+* `help` [command]
+Displays the syntax for the command, or all commands.
+* `history`
 Displays the last typed user .
 * `echo` `[$$]` or `[$?]` or `[$PATH]`
 Return pid and exit statue and PATH.
 ##### Command
 Basicly Every Program in `$PATH`
-It Support Single Word like `ls` 
+It Support Single Word like `ls`
 
 It Handle Path `ls /tmp`
 
