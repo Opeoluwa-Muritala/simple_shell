@@ -57,7 +57,7 @@ void hashtag_handle(char *buff)
 
 	for (i = 0; buff[i] != '\0'; i++)
 	{
-		if (buff[i] == '#'0)
+		if (buff[i] == 0)
 		{
 			buff[i] = '\0';
 			break;
