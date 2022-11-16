@@ -5,7 +5,7 @@
  */
 void prompt(void)
 {
-        PRINTER("$ ");
+	PRINTER("$ ");
 }
 /**
  * print_error - Display Error Based on Command and How Many Time Shell Looped
@@ -16,14 +16,14 @@ void prompt(void)
  */
 void print_error(char *input, int counter, char **argv)
 {
-        char *er;
-
-        PRINTER(argv[0]);
-        PRINTER(": ");
-        er = _itoa(counter);
-        PRINTER(er);
-        free(er);
-        PRINTER(": ");
-        PRINTER(input);
-        PRINTER(": not found\n");
+	char *er;
+	
+	PRINTER(argv[0]);
+	PRINTER(": ");
+	er = _itoa(counter);
+	PRINTER(er);
+	free(er);
+	PRINTER(": ");
+	PRINTER(input);
+	PRINTER(": not found\n");
 }
