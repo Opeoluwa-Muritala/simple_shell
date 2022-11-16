@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * handle-builtin - Handle Builtin Command
+ * handle_builtin - Handle Builtin Command
  * @cmd: Parsed Command
  * @er: Statue of last Execute
  * Return: -1 Fail 0 Success (Return: Execute Builtin)
@@ -23,7 +23,7 @@ int handle_builtin(char **cmd, int er)
 	{
 		if (_strcmp(cmd[0], (bil + i)->command) == 0)
 		{
-			return ((bil + i)->fun(cmd,er));
+			return ((bil + i)->fun(cmd, er));
 		}
 		i++;
 	}
