@@ -17,7 +17,7 @@ void prompt(void)
 void print_error(char *input, int counter, char **argv)
 {
 	char *er;
-	
+
 	PRINTER(argv[0]);
 	PRINTER(": ");
 	er = _itoa(counter);

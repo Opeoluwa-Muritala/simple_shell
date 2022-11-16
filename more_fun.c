@@ -7,8 +7,7 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i;
-	i = 0;
+	int i = 0;
 
 	while (src[i])
 	{
@@ -52,7 +51,7 @@ char *_strchr(char *s, char c)
 {
 
 
-	do{
+	do {
 		if (*s == c)
 		{
 			break;
@@ -61,6 +60,7 @@ char *_strchr(char *s, char c)
 
 	return (s);
 }
+
 /**
  * _strncmp - Compare Amount (n) Of Characters Of Two Strings.
  * @s1: A String.
