@@ -24,6 +24,7 @@ cd: cd [-L|[-P [-e]] [-@]] [dir]
                 a non-zero status
       -@        on systems that support it, present a file with extended
                 attributes as a directory containing the file attributes
+
     The default is to follow symbolic links, as if `-L' were specified.
     `..' is processed by removing the immediately previous pathname component
     back to a slash or the beginning of DIR.

@@ -6,7 +6,8 @@ echo: echo [-neE] [arg ...]
 
     Options:
       -n        do not append a newline
-      -e        enable interpretation of the following backslash escapes      -E        explicitly suppress interpretation of backslash escapes
+      -e        enable interpretation of the following backslash escapes
+      -E        explicitly suppress interpretation of backslash escapes
 
     `echo' interprets the following backslash-escaped characters:
       \a        alert (bell)

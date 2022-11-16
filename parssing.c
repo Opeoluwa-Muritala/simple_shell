@@ -27,5 +27,6 @@ char **parse_cmd(char *input)
 		token = _strtok(NULL, "\n ");
 	}
 	tokens[i] = NULL;
+
 	return (tokens);
 }

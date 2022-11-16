@@ -3,18 +3,18 @@
 /**
  * handle_builtin - Handle Builtin Command
  * @cmd: Parsed Command
- * @er: Statue of last Execute
- * Return: -1 Fail 0 Success (Return: Execute Builtin)
+ * @er:statue of last Excute
+ * Return: -1 Fail 0 Succes (Return :Excute Builtin)
  */
 
 int handle_builtin(char **cmd, int er)
 {
-	bul_t bil[] = {
+	 bul_t bil[] = {
 		{"cd", change_dir},
 		{"env", dis_env},
-		{"echo", echo},
-		{"history", history},
 		{"help", display_help},
+		{"echo", echo_bul},
+		{"history", history_dis},
 		{NULL, NULL}
 	};
 	int i = 0;
@@ -29,17 +29,15 @@ int handle_builtin(char **cmd, int er)
 	}
 	return (-1);
 }
-
 /**
- * check_cmd - Execute Simple Shell Command (Fork,Wait,Execute)
+ * check_cmd - Excute Simple Shell Command (Fork,Wait,Excute)
  *
- * @cmd: Parsed Command
+ * @cmd:Parsed Command
  * @input: User Input
- * @c: Shell Execution Time Case of Command Not Found
- * @argv: Program Name
- * Return: 1 Case COmmand Null -1 Wrong Command 0 Command Executed
+ * @c:Shell Excution Time Case of Command Not Found
+ * @argv:Program Name
+ * Return: 1 Case Command Null -1 Wrong Command 0 Command Excuted
  */
-
 int check_cmd(char **cmd, char *input, int c, char **argv)
 {
 	int status;
@@ -49,8 +47,8 @@ int check_cmd(char **cmd, char *input, int c, char **argv)
 	{
 		return (-1);
 	}
-	pid = fork();
 
+	pid = fork();
 	if (pid == -1)
 	{
 		perror("Error");
@@ -76,16 +74,15 @@ int check_cmd(char **cmd, char *input, int c, char **argv)
 	wait(&status);
 	return (0);
 }
-
 /**
  * signal_to_handel - Handle ^C
- * @sig: Captured Signal
- * Return: void
+ * @sig:Captured Signal
+ * Return: Void
  */
 void signal_to_handel(int sig)
 {
 	if (sig == SIGINT)
 	{
-		PRINTER("\n$");
+		PRINTER("\n$ ");
 	}
 }

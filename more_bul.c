@@ -28,6 +28,7 @@ int history_dis(__attribute__((unused))char **c, __attribute__((unused))int s)
 		free(er);
 		PRINTER(" ");
 		PRINTER(line);
+
 	}
 	if (line)
 		free(line);
@@ -47,10 +48,10 @@ int print_echo(char **cmd)
 	pid = fork();
 	if (pid == 0)
 	{
-		if (execve("/bin/echo", cmd, environ) == -1)
-		{
-			return (-1);
-		}
+	if (execve("/bin/echo", cmd, environ) == -1)
+	{
+		return (-1);
+	}
 		exit(EXIT_FAILURE);
 	}
 	else if (pid < 0)

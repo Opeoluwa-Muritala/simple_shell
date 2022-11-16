@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * read_file - Read Command From File
  * @filename:Filename
@@ -90,4 +89,7 @@ void exit_bul_for_file(char **cmd, char *line, FILE *fd)
 	free(cmd);
 	fclose(fd);
 	exit(statue);
+
+
+
 }

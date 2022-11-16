@@ -12,7 +12,6 @@ int path_cmd(char **cmd)
 
 	path = _getenv("PATH");
 	value = _strtok(path, ":");
-
 	while (value != NULL)
 	{
 		cmd_path = build(*cmd, value);
@@ -44,7 +43,6 @@ char *build(char *token, char *value)
 
 	len = _strlen(value) + _strlen(token) + 2;
 	cmd = malloc(sizeof(char) * len);
-
 	if (cmd == NULL)
 	{
 		return (NULL);
@@ -82,6 +80,7 @@ char *_getenv(char *name)
 				perror("unable to alloc");
 				return (NULL);
 			}
+
 			j = 0;
 			for (x = nl + 1; environ[i][x]; x++, j++)
 			{
