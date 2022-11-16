@@ -15,7 +15,7 @@ void  exit_bul(char **cmd, char *input, char **argv, int c)
 	if (cmd[1] == NULL)
 	{
 		free(input);
-		free(cmd);	
+		free(cmd);
 		exit(EXIT_SUCCESS);
 	}
 	while (cmd[1][i])
